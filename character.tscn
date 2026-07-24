@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dwhjoj8hqeeab"]
+
+[ext_resource type="PackedScene" uid="uid://2p5ja4n2423g" path="res://node_2d.tscn" id="1_pjt0s"]
+[ext_resource type="Texture2D" uid="uid://cvom6wkvjpf0u" path="res://pixil-frame-0 (2).png" id="2_wa5vi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfnr8"]
+size = Vector2(18, 18)
+
+[node name="character" type="Node2D" unique_id=1089474518]
+
+[node name="CharacterBody2D" parent="." unique_id=1592241007 instance=ExtResource("1_pjt0s")]
+z_index = 1
+scale = Vector2(0.1, 0.1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D" unique_id=869014014]
+scale = Vector2(18, 18)
+shape = SubResource("RectangleShape2D_wfnr8")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D2" unique_id=819746405]
+z_index = 10
+scale = Vector2(19.843, 18)
+texture = ExtResource("2_wa5vi")

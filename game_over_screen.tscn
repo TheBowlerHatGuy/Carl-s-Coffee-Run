@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://00kpd6qlbl1i"]
+
+[ext_resource type="Script" uid="uid://wd5k7q8oy210" path="res://game_over_screen.gd" id="1_gt22q"]
+
+[node name="GameOverScreen" type="Control" unique_id=410222976]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gt22q")
+
+[node name="Label" type="Label" parent="." unique_id=1184201780]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 113.0
+offset_right = 1961.0
+offset_bottom = 371.0
+theme_override_font_sizes/font_size = 64
+text = "You died which is bad, survive for 
+1 minute, 30 seconds to win"
+
+[node name="Button" type="Button" parent="." unique_id=1363628727]
+layout_mode = 0
+offset_left = 449.0
+offset_top = 407.0
+offset_right = 804.0
+offset_bottom = 635.0
+text = "Try again??"

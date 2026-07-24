@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://duh85ee87eknm"]
+
+[ext_resource type="Script" uid="uid://e4638hfy6tvc" path="res://turret.gd" id="1_3oylf"]
+[ext_resource type="Texture2D" uid="uid://dlfe6sxu2xu8a" path="res://16x16-pixel-art-turret-top-down-perspective-32x32-pixel-art-ea9b.png" id="2_tjdg3"]
+
+[node name="TURRET" type="Node2D" unique_id=51116234]
+script = ExtResource("1_3oylf")
+
+[node name="GunSprite" type="Sprite2D" parent="." unique_id=2051515147]
+z_index = 2
+position = Vector2(-4.7683716e-07, 0)
+rotation = 1.9991751
+scale = Vector2(0.11005999, 0.11650698)
+texture = ExtResource("2_tjdg3")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1971943308]
+target_position = Vector2(0, 0)
+collision_mask = 3
+
+[node name="ReloadTimer" type="Timer" parent="RayCast2D" unique_id=5234961]
+one_shot = true
