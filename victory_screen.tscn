@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://c60gaj68m3qfi"]
+
+[ext_resource type="Script" uid="uid://d3nn2a3ch0osh" path="res://control.gd" id="1_rbj82"]
+
+[node name="VictoryScreen" type="Control" unique_id=1358999189]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rbj82")
+
+[node name="RestartButton" type="Button" parent="." unique_id=266741954]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 291.0
+offset_right = 321.0
+offset_bottom = 299.0
+
+[node name="YouWinLabel" type="Label" parent="." unique_id=102584764]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 230.0
+offset_right = 426.0
+offset_bottom = 253.0
+scale = Vector2(3.1823828, 5.8246317)
+text = "You Won!!! 
+restart game to play again"
