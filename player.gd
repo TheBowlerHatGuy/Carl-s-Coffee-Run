@@ -1,11 +1,12 @@
 extends CharacterBody2D
-
-# Assign your TileMapLayer (Godot 4.3+) or TileMap (Godot 4.0-4.2) in Inspector
+# Health bar sync
+@export var health_bar: HBoxContainer
+# Assign TileMapLayer
 @export var tile_map: TileMapLayer 
 
-# --- HEALTH SYSTEM ---
-@export var max_health: int = 3
-var current_health: int = 3
+# HP System
+@export var max_health: int = 5
+var current_health: int = 5
 
 const SPEED: float = 300.0 # How fast the character glides between tiles
 

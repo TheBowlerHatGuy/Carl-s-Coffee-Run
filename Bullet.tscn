@@ -1,23 +1,31 @@
 [gd_scene format=3 uid="uid://bqruc6ecneodt"]
 
 [ext_resource type="Script" uid="uid://bisqy3h7r1253" path="res://bullet.gd" id="1_4s4u5"]
-[ext_resource type="Texture2D" uid="uid://dx6sfmtxc4qde" path="res://download.png" id="2_7281b"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ayd6b"]
+load_path = "res://.godot/imported/turret-and-coffee-beans.png-43043304b41e3351145728af8c1d1e3e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjdg3"]
+atlas = SubResource("CompressedTexture2D_ayd6b")
+region = Rect2(18, 36, 18, 18)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r4le7"]
-radius = 2.0005722
-height = 19.998857
+radius = 1.1794181
+height = 2.5140872
 
 [node name="Area2D" type="Area2D" unique_id=1109414586]
-position = Vector2(3, -17)
+position = Vector2(-1.4305115e-06, 2.861023e-06)
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_4s4u5")
 
-[node name="Download" type="Sprite2D" parent="." unique_id=1266500802]
-position = Vector2(-28, 4)
+[node name="BulletBeanPNG" type="Sprite2D" parent="." unique_id=1266500802]
+position = Vector2(1.5497208e-06, -2.814632e-06)
 rotation = 6.2831855
-scale = Vector2(-0.057792023, 0.024058018)
-texture = ExtResource("2_7281b")
+scale = Vector2(-1.0427777, 0.7620098)
+texture = SubResource("AtlasTexture_tjdg3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2078278433]
-position = Vector2(-28, 3.9999986)
+position = Vector2(9.536743e-07, -1.9073486e-06)
 rotation = 1.5714595
+scale = Vector2(-2.5023823, 4.8984656)
 shape = SubResource("CapsuleShape2D_r4le7")

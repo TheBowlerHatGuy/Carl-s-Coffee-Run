@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cvfbwwuyifaac"]
+
+[ext_resource type="Script" uid="uid://cr04o1h8gsyuc" path="res://laser_base.gd" id="1_4hm76"]
+[ext_resource type="Texture2D" uid="uid://sfe46cyhlohg" path="res://laser-on&off.png" id="3_cxjng"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vef74"]
+atlas = ExtResource("3_cxjng")
+region = Rect2(14, 15, 36, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1h7qr"]
+atlas = ExtResource("3_cxjng")
+region = Rect2(36, 17, 18, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5368"]
+
+[node name="MovingLaser" type="Node2D" unique_id=1424447501]
+visible = false
+script = ExtResource("1_4hm76")
+
+[node name="LeftBase" type="Sprite2D" parent="." unique_id=2040570553]
+z_index = 5
+position = Vector2(415, 15)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_vef74")
+
+[node name="RightBase" type="Sprite2D" parent="." unique_id=899927715]
+z_index = 5
+position = Vector2(873, 12.999999)
+scale = Vector2(2, 2)
+texture = SubResource("AtlasTexture_1h7qr")
+
+[node name="BeamLine" type="Line2D" parent="." unique_id=201607410]
+z_index = 6
+width = 8.0
+
+[node name="HitArea" type="Area2D" parent="." unique_id=1852946164]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea" unique_id=1274536486]
+shape = SubResource("RectangleShape2D_n5368")
+
+[node name="RayCastUp" type="RayCast2D" parent="." unique_id=1345268681]
+
+[node name="RayCastDown" type="RayCast2D" parent="." unique_id=250774449]

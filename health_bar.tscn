@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://d20kq7co360tq"]
+
+[ext_resource type="Script" uid="uid://b8jt7hgfpe846" path="res://health_bar.gd" id="1_kdjhy"]
+[ext_resource type="Texture2D" uid="uid://c35xm17rrpacl" path="res://pixil-frame-0.png" id="2_srckl"]
+
+[node name="HealthBar" type="HBoxContainer" unique_id=196588568]
+z_index = 4
+offset_left = -20.0
+offset_top = -5.9999995
+offset_right = 241.0
+offset_bottom = 120.0
+scale = Vector2(0.3487999, 0.09676815)
+script = ExtResource("1_kdjhy")
+
+[node name="Box1" type="TextureRect" parent="." unique_id=204657663]
+layout_mode = 2
+texture = ExtResource("2_srckl")
+
+[node name="Box2" type="TextureRect" parent="." unique_id=1709392454]
+layout_mode = 2
+texture = ExtResource("2_srckl")
+
+[node name="Box3" type="TextureRect" parent="." unique_id=990568338]
+layout_mode = 2
+texture = ExtResource("2_srckl")
+
+[node name="Box4" type="TextureRect" parent="." unique_id=1268840217]
+layout_mode = 2
+texture = ExtResource("2_srckl")
+
+[node name="Box5" type="TextureRect" parent="." unique_id=1798750190]
+layout_mode = 2
+texture = ExtResource("2_srckl")

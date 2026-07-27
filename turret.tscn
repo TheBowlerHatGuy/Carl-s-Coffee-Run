@@ -1,19 +1,38 @@
 [gd_scene format=3 uid="uid://duh85ee87eknm"]
 
 [ext_resource type="Script" uid="uid://e4638hfy6tvc" path="res://turret.gd" id="1_3oylf"]
-[ext_resource type="Texture2D" uid="uid://dlfe6sxu2xu8a" path="res://16x16-pixel-art-turret-top-down-perspective-32x32-pixel-art-ea9b.png" id="2_tjdg3"]
+[ext_resource type="Texture2D" uid="uid://ctjbped4i6xqk" path="res://turret-and-coffee-beans.png" id="2_tjdg3"]
+[ext_resource type="Texture2D" uid="uid://xnkkcxd1f7ct" path="res://BETTERturret-and-coffee-beansBETTER.png" id="3_c5apd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjdg3"]
+atlas = ExtResource("2_tjdg3")
+region = Rect2(36, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kw7u"]
+atlas = ExtResource("3_c5apd")
+region = Rect2(18, 18, 18, 18)
 
 [node name="TURRET" type="Node2D" unique_id=51116234]
+z_index = 11
+position = Vector2(0.99999905, 0)
+scale = Vector2(3, 3)
 script = ExtResource("1_3oylf")
 
+[node name="BaseSprite" type="Sprite2D" parent="." unique_id=1521713721]
+position = Vector2(7.6293945e-06, 1.9073486e-06)
+rotation = 3.1415927
+scale = Vector2(2, 4)
+texture = SubResource("AtlasTexture_tjdg3")
+
 [node name="GunSprite" type="Sprite2D" parent="." unique_id=2051515147]
-z_index = 2
-position = Vector2(-4.7683716e-07, 0)
-rotation = 1.9991751
-scale = Vector2(0.11005999, 0.11650698)
-texture = ExtResource("2_tjdg3")
+z_index = 5
+position = Vector2(3.1789142e-07, 3.666667)
+rotation = -1.5707964
+scale = Vector2(-2.7, -2.7)
+texture = SubResource("AtlasTexture_2kw7u")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1971943308]
+position = Vector2(-0.6666664, 0.33333206)
 target_position = Vector2(0, 0)
 collision_mask = 3
 

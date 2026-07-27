@@ -8,7 +8,7 @@ func _ready() -> void:
 	get_tree().paused = false
 	
 	if survival_timer:
-		survival_timer.wait_time = 90.0 
+		survival_timer.wait_time = 60.0 
 		survival_timer.timeout.connect(_on_survival_timer_timeout)
 		survival_timer.start()
 	else:

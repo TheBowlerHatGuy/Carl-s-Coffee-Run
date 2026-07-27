@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://drg2jpieqq3dx"]
+
+[ext_resource type="Script" uid="uid://dwn2g37eik5nq" path="res://Laser.gd" id="1_dl81w"]
+[ext_resource type="SpriteFrames" path=""C:\Users\micro\Downloads\turret-and-coffee-beans.png"" id="2_5rgpn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n5368"]
+size = Vector2(108, 7)
+
+[node name="Laser" type="Area2D" unique_id=708638155]
+script = ExtResource("1_dl81w")
+
+[node name="LaserBody" type="CollisionShape2D" parent="." unique_id=919579966]
+position = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_n5368")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1302315754]
+sprite_frames = ExtResource("2_5rgpn")
